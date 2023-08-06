@@ -1,0 +1,22 @@
+<div class="product-list">
+  <h2>Available Cloud Products</h2>
+  <!-- Add the Product List Link here -->
+  <a routerLink="/product-list">Product List</a>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Product Name</th>
+        <th>Description</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product.name }}</td>
+        <td>{{ product.description }}</td>
+        <td>{{ product.price | currency:'USD':'symbol':'1.2-2' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
